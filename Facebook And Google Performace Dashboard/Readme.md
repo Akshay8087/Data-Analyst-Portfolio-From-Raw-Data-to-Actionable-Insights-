@@ -137,4 +137,7 @@ Update file source → Apply changes
 **Akshay Rathod**  
 - 🔗 [LinkedIn](https://www.linkedin.com/in/akshay-rathod-data-analyst/)  
 - 💻 [GitHub](https://github.com/Akshay8087)  
-- 📧 your.email@example.com
+- 📧 akshayrathod8179@gmail.com
+- 📞 8087828179
+- Stay Tuned For AB Testing
+
