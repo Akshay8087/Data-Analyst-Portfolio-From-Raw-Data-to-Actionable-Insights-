@@ -1,138 +1,140 @@
-# Digital Advertising Performance Dashboard (Google & Facebook Ads)
+# 📊 Digital Ads Performance Dashboard
 
 <p align="center">
-  <img src="./images/overview.png" alt="Dashboard Overview" width="800"/>
+  <img alt="Power BI" src="https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=Power-BI&logoColor=white">
+  <img alt="DAX" src="https://img.shields.io/badge/DAX-2E8540?style=for-the-badge&logo=Power-BI&logoColor=white">
+  <img alt="Power Query" src="https://img.shields.io/badge/Power%20Query-2E8540?style=for-the-badge&logo=Power-BI&logoColor=white">
 </p>
 
----
+<p align="center">
+  <a href="https://www.linkedin.com/in/akshay-rathod-data-analyst/">
+    <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Akshay%20Rathod-0A66C2?style=for-the-badge&logo=linkedin">
+  </a>
+  <a href="https://github.com/Akshay8087">
+    <img alt="GitHub" src="https://img.shields.io/badge/GitHub-Akshay8087-181717?style=for-the-badge&logo=github">
+  </a>
+</p>
 
-## 📖 Executive Summary
+<img width="421" height="641" alt="Image" src="https://github.com/user-attachments/assets/cc415f78-60dd-4897-ac16-00a09f436ef4" />
+<img width="411" height="626" alt="Image" src="https://github.com/user-attachments/assets/8ae188c3-9429-4434-a10d-b055c9dfe860" />
 
-This Power BI report provides a comprehensive, unified view of digital advertising performance across Google Ads and Facebook Ads. It is designed for marketing managers, performance analysts, and business stakeholders to monitor key metrics, compare channel efficiency, and make data-driven decisions to optimize marketing ROI. The dashboard centralizes critical KPIs, visualizes performance trends, and allows for a granular deep dive into each platform's specific results.
-
----
-
-## 🎯 Business Problem
-
-Marketing departments often allocate significant budgets across multiple ad platforms like Google and Facebook. Managing and analyzing performance data from these disparate sources is challenging, time-consuming, and makes it difficult to get a holistic view of marketing effectiveness. This report solves the following problems:
-
-* **Lack of a Single Source of Truth:** Eliminates the need to manually download reports and switch between different ad manager platforms to gauge overall performance.
-* **Difficulty in Comparing Channel ROI:** Provides direct, side-by-side comparisons of cost and conversion metrics (like CPA and ROAS) to determine which platform offers a better return on investment.
-* **Inability to Spot Cross-Platform Trends:** Visualizes performance over time, helping to identify seasonal patterns, campaign fatigue, or opportunities for budget reallocation between channels.
-* **Time-Consuming Manual Reporting:** Automates the data aggregation and visualization process, freeing up analysts to focus on generating insights rather than building reports.
 
 ---
 
-## 💾 Data Sources
-
-This report is designed to connect directly to platform APIs for automated refreshes. For this public version, it uses sample monthly data stored in CSV files.
-
-* **Primary Sources (Sample Data):**
-    * `Google Ads Performance.csv`
-    * `Facebook Ads Performance.csv`
-* **Connectivity:** The data model is built to be easily switched to live data sources using Power BI's native connectors for **Google Ads** and **Facebook Ads**.
-* **Granularity:** Data is aggregated and visualized on a **monthly** basis.
-* **Refresh Schedule:** When connected to live APIs, the report is scheduled for a **daily refresh** to ensure data is current.
-
----
-
-## 📊 Report Pages Overview
-
-The report is organized into three main pages for a clear, hierarchical analysis, moving from a high-level summary to granular details.
-
-### 1. Main Overview Page
-
-This page serves as the executive summary, offering a comparative look at both platforms' overall performance.
-* **Visuals:**
-    * [cite_start]**KPI Cards:** Key aggregate metrics for both Google and Facebook are displayed prominently at the top, including Total Impressions, Clicks, Conversions, and Cost[cite: 1903, 1904, 1905, 1906].
-    * **Performance Trend (Line Chart):** A time-series chart that tracks ad views or impressions for both platforms over the year.
-    * **Conversions Share (Donut Chart):** A simple visual that shows the percentage contribution of each platform to the total number of conversions.
-    * **Cost Efficiency vs Return (Bar Chart):** Compares Cost Per Acquisition (CPA) and Return On Ad Spend (ROAS) side-by-side, directly answering which platform is more cost-effective.
-* **Interactivity:**
-    * [cite_start]**Navigation Buttons:** Buttons to navigate to the "Google Deep Dive" and "Facebook Deep Dive" pages[cite: 1957, 1972].
-
-### 2. Google Ads Deep Dive Page
-
-This page provides a detailed breakdown of the Google Ads account performance.
-* **Visuals:**
-    * **Google-Specific KPI Cards:** Displays core Google Ads metrics like CPC, CTR, CPA, and Total Cost.
-    * **Monthly Impressions vs. CTR (Combo Chart):** Analyzes the relationship between ad visibility and engagement over time.
-    * **Cost Per Acquisition (CPA) Over Time (Line Chart):** Compares Google's CPA against Facebook's CPA to track cost efficiency trends.
-    * **Monthly Performance Table:** A detailed grid showing monthly data for Cost, Conversions, and CPA.
-* **Interactivity:**
-    * **Cross-filtering:** Clicking on a month in any chart will filter the other visuals on the page.
-
-### 3. Facebook Ads Deep Dive Page
-
-This page mirrors the Google Deep Dive in structure, allowing for consistent and easy comparison.
-* **Visuals:**
-    * [cite_start]**Facebook-Specific KPI Cards:** Displays core Facebook Ads metrics like CPC, CTR, CPA, and Total Cost[cite: 1903, 1904, 1905, 1906].
-    * **Monthly Impressions vs. CTR (Combo Chart):** Visualizes the monthly trend of ad impressions and click-through rates.
-    * **Cost Per Acquisition (CPA) Over Time (Line Chart):** Tracks Facebook's CPA against Google's CPA and the target CPA.
-    * **Monthly Performance Table:** Provides a detailed breakdown of monthly performance metrics.
-* **Interactivity:**
-    * The page is fully interactive, with visuals that cross-filter each other upon selection.
+## 📋 Table of Contents
+1. [Overview](#-overview)
+2. [Key Insights](#-key-insights)
+3. [Tech Stack](#-tech-stack)
+4. [Dashboard Design](#-dashboard-design)
+5. [Usage Guide](#-usage-guide)
+6. [Setup Instructions](#-setup-instructions)
+7. [Screenshots](#-screenshots)
+8. [Contact](#-contact)
 
 ---
 
-## ✨ Features & Highlights
+## 📌 Overview
+This Power BI dashboard consolidates **Google Ads** and **Facebook Ads** data to deliver a unified view of digital marketing performance.  
+It helps marketing teams move beyond siloed platform metrics and focus on **business impact of ad spend**.
 
-* **Unified Dashboard:** Aggregates data from two major ad platforms into one central location.
-* **Comparative Analysis:** Visuals are designed specifically to compare Google vs. Facebook on key metrics like CPA, Conversions, and ROAS.
-* **Interactive Navigation:** A user-friendly navigation system with buttons allows for seamless movement between the overview and deep-dive pages.
-* **Drill-Down Capability:** The report structure enables users to start with a high-level summary and drill down into the details of a specific platform.
-* [cite_start]**Custom Visuals:** Utilizes custom visuals like `textSearchSlicer` and `InforiverCharts` for enhanced filtering and visualization capabilities[cite: 89, 258].
+> 🔗 *(Optional: Add a link to your published Power BI report here.)*
 
 ---
 
-## 🚀 How to Use the Report
+## 💡 Key Insights
+The dashboard answers critical marketing questions:
 
-1.  **Start with the Main Overview Page:** Use this page to get a quick, high-level understanding of aggregate performance and compare the two channels.
-2.  **Navigate to a Deep Dive:** If you notice an interesting trend or want more detail on a specific platform, click the corresponding **"Deep Dive" button**.
-3.  **Filter and Explore:** On the deep dive pages, click on any element (e.g., a month in a chart, a specific campaign in a table) to cross-filter the entire page and isolate data.
-4.  **Hover for Details:** Hover your mouse over any data point in a visual to see a tooltip with more specific information and exact numbers.
+- **ROI by Platform** → Which channel delivers higher **Return on Ad Spend (ROAS)**?  
+- **Cost Efficiency** → What is the overall **Cost Per Acquisition (CPA)** and how has it trended?  
+- **Conversion Drivers** → Which platform contributes the majority of conversions?  
+- **Engagement** → How do **CTR** and **CPC** compare across Google & Facebook?  
 
 ---
 
-## 🛠️ Getting Started / Setup Instructions
+## 🛠 Tech Stack
+- **Data Sources:** Sample CSVs (`GoogleAds.csv`, `FacebookAds.csv`) → can be swapped with API feeds.  
+- **ETL / Transformation:** **Power Query**  
+  - Standardized schema across platforms  
+  - Consolidated `Fact_CampaignPerformance` table  
+  - Custom `Dim_Date` table for time intelligence  
+- **Data Modeling:** Star Schema (fact + dimension)  
+- **DAX Measures:** Custom KPIs  
 
-To view and interact with this report, you will need to have **Power BI Desktop** installed.
+```dax
+// Example Measures
 
-1.  **Download the File:** Clone this repository or download the `Ads Performance.pbix` file.
-2.  **Open in Power BI Desktop:** Open the `.pbix` file using Power BI Desktop.
-3.  **View the Report:** The report will load with the saved sample data.
-4.  **(Optional) Connect Your Own Data:**
-    * Go to **Transform data** to open the Power Query Editor.
-    * Select the sample data query (e.g., `Google Ads Performance`).
-    * Click on **Source** under "Applied Steps."
-    * Change the source to your own data file (CSV, Excel) or connect to the Google/Facebook Ads connector.
-    * Repeat for the other data source and click **Close & Apply**.
+CPA = DIVIDE([Total Cost], [Total Conversions], 0)
+
+ROAS = DIVIDE([Total Revenue], [Total Cost], 0)
+
+// Time Intelligence
+Conversions MTD = TOTALMTD([Total Conversions], 'Dim_Date'[Date])
+
+```
+
+
+## 🎨 Dashboard Design
+The report uses a consistent dark theme and is structured across **3 main pages**:
+
+### 1. 📍 Main Overview
+- High-level Google vs. Facebook performance comparison  
+- **Visuals:** KPI Cards, Donut Chart (Conversion Share), Line Chart (Trends), Bar Chart (CPA vs. ROAS)  
+- **Navigation:** Buttons link to deep-dive pages  
+
+### 2. 🔵 Facebook Ads Deep Dive
+- Detailed Facebook metrics (CPC, CTR, CPA, conversions)  
+- **Visuals:** Combo charts, line charts, performance tables  
+- **Interactivity:** Fully interactive cross-filters  
+
+### 3. 🔴 Google Ads Deep Dive
+- Mirrors Facebook page structure for consistency  
+- **Visuals:** Google-specific KPI cards, trends, drill-down tables  
+
+---
+
+## 🚀 Usage Guide
+1. Start with the **Main Overview** for overall performance.  
+2. Use the **Navigation buttons** to drill into Google or Facebook details.  
+3. **Click charts** to apply cross-filtering.  
+4. **Hover on visuals** for detailed tooltips.  
+
+---
+
+## ⚙️ Setup Instructions
+To run this project locally:
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/Akshay8087/Your-Repo-Name.git
+   ```
+---
+
+2. Open Ads Performance.pbix in Power BI Desktop.
+
+- Load sample data (already included) or replace with your own:
+
+- Go to Transform Data → select a query (e.g., Facebook_Data)
+
+Update file source → Apply changes
+---
 
 ---
 
 ## 📸 Screenshots
-
-*Place your report screenshots in an `images` folder within the repository.*
-
-![Overview Page](./images/overview.png)
-![Facebook Ads Deep Dive](./images/facebook.png)
-![Google Ads Deep Dive](./images/google.png)
-
+*(Place screenshots inside an `/images` folder in the repo)*  
+<img width="412" height="638" alt="Image" src="https://github.com/user-attachments/assets/91e531b4-43d6-4f18-b200-7d4dbe5da067" />
+<img width="421" height="641" alt="Image" src="https://github.com/user-attachments/assets/cc415f78-60dd-4897-ac16-00a09f436ef4" />
+<img width="328" height="592" alt="Image" src="https://github.com/user-attachments/assets/08cd058d-4177-4340-9210-32273aae6ff8" />
+<img width="411" height="626" alt="Image" src="https://github.com/user-attachments/assets/8ae188c3-9429-4434-a10d-b055c9dfe860" />
+<img width="332" height="592" alt="Image" src="https://github.com/user-attachments/assets/c645c00e-7d4d-4e5d-93e9-a6d76cd7b564" />
 ---
 
-## 📝 License
 
-This project is licensed under the **MIT License**. See the `LICENSE` file for more details.
 
----
 
-## 👥 Credits / Author Info
 
-* **Author:** [Your Name / Company Name]
-* **Contact:** [your.email@example.com]
-
----
-
-## 🙌 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the issues page if you want to contribute.
+## 📞 Contact
+**Akshay Rathod**  
+- 🔗 [LinkedIn](https://www.linkedin.com/in/akshay-rathod-data-analyst/)  
+- 💻 [GitHub](https://github.com/Akshay8087)  
+- 📧 your.email@example.com
