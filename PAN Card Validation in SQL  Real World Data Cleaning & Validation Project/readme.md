@@ -1,4 +1,14 @@
 # 💳 PAN Card Validation SQL Project
+<p align="center">
+  <strong style="font-size:20px">💳 PAN Card Validation</strong><br>
+  <em>SQL toolkit & queries for PAN validation and reporting</em>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/SQL-ready-blue" alt="SQL ready" />
+  <img src="https://img.shields.io/badge/format-PAN-orange" alt="PAN format" />
+  <img src="https://img.shields.io/github/license/your-username/your-repo" alt="license" />
+</p>
 
 ## Project Overview 🎯
 This project focuses on **data cleaning and validation of Permanent Account Numbers (PAN)** for Indian nationals using SQL. The primary goal is to process a dataset of PAN numbers, ensure they adhere to official formats and rules, and categorize them as either **valid** or **invalid**. The project also includes generating comprehensive reports on the validation status.
@@ -259,4 +269,5 @@ Contributions are welcome! If you have suggestions for improvements, bug fixes, 
 ---
 
 ## License 📄
+
 This project is open-source and available under the [MIT License](LICENSE).
