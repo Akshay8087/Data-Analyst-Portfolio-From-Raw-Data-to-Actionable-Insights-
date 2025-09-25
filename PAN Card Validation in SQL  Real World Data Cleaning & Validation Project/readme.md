@@ -55,48 +55,47 @@ A PAN number is a 10-character alphanumeric string with the following structure:
 * **Last character:** Alphabet (A-Z)
 
 ### Data Cleaning Rules (Pre-processing)
-1.  **Handle Missing Data:** Remove records with `NULL` or entirely blank PAN numbers [00:03:22].
-2.  **Remove Duplicates:** Ensure each PAN number is unique [00:03:42].
-3.  **Trim Spaces:** Remove leading and trailing spaces from PAN entries [00:03:54].
-4.  **Correct Letter Case:** Convert all PAN numbers to uppercase [00:04:05].
+1.  **Handle Missing Data:** Remove records with `NULL` or entirely blank PAN numbers.
+2.  **Remove Duplicates:** Ensure each PAN number is unique.
+3.  **Trim Spaces:** Remove leading and trailing spaces from PAN entries .
+4.  **Correct Letter Case:** Convert all PAN numbers to uppercase.
 
 ### Validation Rules (Post-cleaning)
-1.  **Length Check:** PAN must be exactly 10 characters long. (Handled implicitly by regex pattern matching) [00:04:22].
-2.  **Pattern Match:** Adhere to the `[AAAAA][DDDD][A]` format using regular expressions [00:04:28].
+1.  **Length Check:** PAN must be exactly 10 characters long. (Handled implicitly by regex pattern matching) .
+2.  **Pattern Match:** Adhere to the `[AAAAA][DDDD][A]` format using regular expressions .
 3.  **First Five Alphabets Rules:**
-    * **No Adjacent Same Characters:** E.g., `AABCD` is invalid, `AXBCD` is valid [00:05:09].
-    * **No Sequential Characters:** E.g., `ABCDE` is invalid, `ABCDX` is valid [00:05:27].
+    * **No Adjacent Same Characters:** E.g., `AABCD` is invalid, `AXBCD` is valid.
+    * **No Sequential Characters:** E.g., `ABCDE` is invalid, `ABCDX` is valid.
 4.  **Next Four Digits Rules:**
-    * **No Adjacent Same Digits:** E.g., `1123` is invalid, `1923` is valid [00:05:58].
-    * **No Sequential Digits:** E.g., `1234` is invalid, `1239` is valid [00:06:07].
-5.  **Last Character:** Must be an uppercase alphabet [00:06:25].
+    * **No Adjacent Same Digits:** E.g., `1123` is invalid, `1923` is valid .
+    * **No Sequential Digits:** E.g., `1234` is invalid, `1239` is valid.
+5.  **Last Character:** Must be an uppercase alphabet.
 
 ---
 
 ## Implementation Details 💻
 
 ### Database Setup
-1.  **Create Table:** A staging table `STG_PAN_NUMBERS_DATASET` is created in PostgreSQL with a single `pan_number` column (TEXT type) [00:08:06].
+1.  **Create Table:** A staging table `STG_PAN_NUMBERS_DATASET` is created in PostgreSQL with a single `pan_number` column (TEXT type).
     ```sql
     CREATE TABLE STG_PAN_NUMBERS_DATASET (
         pan_number TEXT
     );
     ```
-2.  **Import Data:** The raw PAN data (initially in Excel) is converted to CSV format and imported into the `STG_PAN_NUMBERS_DATASET` table [00:08:32].
+2.  **Import Data:** The raw PAN data (initially in Excel) is converted to CSV format and imported into the `STG_PAN_NUMBERS_DATASET` table .
 
 ### SQL Queries & Functions
 
 #### 1. Data Cleaning CTE (`CTE_CLEANED_PAN`)
 This Common Table Expression (CTE) consolidates all cleaning steps:
-* Removes `NULL` PANs [00:14:01].
-* Removes duplicate PANs using `DISTINCT` [00:14:47].
-* Trims leading/trailing spaces using `TRIM()` and removes empty strings [00:15:00].
-* Converts all PANs to uppercase using `UPPER()` [00:16:26].
-
+* Removes `NULL` PANs .
+* Removes duplicate PANs using `DISTINCT`.
+* Trims leading/trailing spaces using `TRIM()` and removes empty strings .
+* Converts all PANs to uppercase using `UPPER()`.
 #### 2. User-Defined Functions (UDFs) for Complex Validations
 Two PostgreSQL functions were created to handle the adjacent and sequential character/digit rules:
 
-* **`fn_check_adjacent_characters(p_string_str TEXT)`** [00:18:11]
+* **`fn_check_adjacent_characters(p_string_str TEXT)`** 
     * **Purpose:** Checks if any two adjacent characters in a given string are the same.
     * **Returns:** `TRUE` if adjacent characters are the same (indicating invalidity), `FALSE` otherwise.
     * **Logic:** Loops through the string, comparing `SUBSTRING(p_string_str, i, 1)` with `SUBSTRING(p_string_str, i+1, 1)`.
@@ -119,7 +118,7 @@ Two PostgreSQL functions were created to handle the adjacent and sequential char
     $$;
     ```
 
-* **`fn_check_sequential_characters(p_string_str TEXT)`** [00:26:14]
+* **`fn_check_sequential_characters(p_string_str TEXT)`** 
     * **Purpose:** Checks if all characters in a given string form a sequential series (e.g., ABCDE, 1234).
     * **Returns:** `TRUE` if characters are sequential (indicating invalidity), `FALSE` otherwise.
     * **Logic:** Compares the ASCII values of adjacent characters. If `ASCII(SUBSTRING(p_string_str, i + 1, 1)) - ASCII(SUBSTRING(p_string_str, i, 1))` is always `1` for all adjacent pairs, it's sequential.
@@ -157,7 +156,7 @@ A PostgreSQL `VIEW` is created to encapsulate the full validation logic and cate
 * Applies the regular expression pattern match.
 * Calls `fn_check_adjacent_characters` for the first 5 alphabets (substring 1, 5) and the 4 digits (substring 6, 4).
 * Calls `fn_check_sequential_characters` for the first 5 alphabets (substring 1, 5) and the 4 digits (substring 6, 4).
-* A `CASE` statement assigns 'Valid PAN' if all conditions are met, otherwise 'Invalid PAN' [00:41:37].
+* A `CASE` statement assigns 'Valid PAN' if all conditions are met, otherwise 'Invalid PAN'.
 
     ```sql
     -- Example structure of the view (simplified for brevity, full logic uses the UDFs and regex)
@@ -194,10 +193,10 @@ A PostgreSQL `VIEW` is created to encapsulate the full validation logic and cate
 
 #### 5. Summary Report Query
 This query utilizes the `STG_PAN_NUMBERS_DATASET` table and `VIEW_VALID_INVALID_PANS` view to generate the final summary:
-* `COUNT(*)` from `STG_PAN_NUMBERS_DATASET` for total processed records [00:47:21].
-* `COUNT(*) FILTER (WHERE status = 'Valid PAN')` from the view for total valid PANs [00:45:00].
-* `COUNT(*) FILTER (WHERE status = 'Invalid PAN')` from the view for total invalid PANs [00:45:39].
-* Calculates missing/incomplete PANs by subtracting (valid + invalid) from total processed [00:48:09].
+* `COUNT(*)` from `STG_PAN_NUMBERS_DATASET` for total processed records .
+* `COUNT(*) FILTER (WHERE status = 'Valid PAN')` from the view for total valid PANs .
+* `COUNT(*) FILTER (WHERE status = 'Invalid PAN')` from the view for total invalid PANs .
+* Calculates missing/incomplete PANs by subtracting (valid + invalid) from total processed .
 
     ```sql
     WITH CTE_SUMMARY AS (
@@ -218,7 +217,7 @@ This query utilizes the `STG_PAN_NUMBERS_DATASET` table and `VIEW_VALID_INVALID_
         * Total Processed Records: `10,000`
         * Total Valid PANs: `3,186`
         * Total Invalid PANs: `5,839`
-        * Total Missing/Incomplete PANs: `975` [00:49:07]
+        * Total Missing/Incomplete PANs: `975`
 
 ---
 
@@ -271,3 +270,4 @@ Contributions are welcome! If you have suggestions for improvements, bug fixes, 
 ## License 📄
 
 This project is open-source and available under the [MIT License](LICENSE).
+
