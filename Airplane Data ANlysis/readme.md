@@ -66,11 +66,13 @@ To replicate this analysis, please follow these steps:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/your-repository-name.git](https://github.com/your-username/your-repository-name.git)
+    git clone git clone https://github.com/Akshay8087/Indian-Domestic-Airlines-Flight-Data-Analysis.git
+
     ```
 2.  **Navigate to the project directory:**
     ```bash
-    cd your-repository-name
+    cd  Indian-Domestic-Airlines-Flight-Data-Analysis
+
     ```
 3.  **Install the required libraries:**
     ```bash
@@ -96,4 +98,5 @@ To gain a deeper understanding of the airline industry and the factors influenci
 * **Low-Cost Carrier (LCC) vs. Full-Service Carrier (FSC)**: The airline's business model significantly impacts pricing, routes, and services offered.
     * *Suggested Reading: The Difference Between Full-Service and Low-Cost Airlines*
 * **Directorate General of Civil Aviation (DGCA), India**: The regulatory body for civil aviation in India.
+
     * [DGCA Official Website](https://dgca.gov.in)
