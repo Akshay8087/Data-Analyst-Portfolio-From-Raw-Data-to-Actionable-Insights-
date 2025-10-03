@@ -233,18 +233,48 @@ Based on the comprehensive analysis, the following recommendations are put forth
 
 ## 🛠️ Technologies Used
 
-* **SQL (SQLite):** For efficient data storage, querying, and manipulation of the large Yelp dataset.
-* **Python:**
-    * **Pandas:** For data loading, processing, and DataFrame operations.
-    * **Matplotlib & Seaborn:** For comprehensive data visualization (bar plots, line plots, heatmaps).
-    * **Folium:** For interactive geographical mapping of success scores.
-    * **SQLAlchemy:** For connecting Python to the SQLite database.
-    * **NumPy:** For numerical operations.
-    * **DateTime:** For handling temporal data.
-    * **Statsmodels:** For time series decomposition.
+<table>
+  <tr>
+    <td><img src="https://img.icons8.com/color/48/000000/sql.png" alt="SQL" width="40"/></td>
+    <td><b>SQL (SQLite)</b><br>Used for querying and filtering the Yelp dataset efficiently.</td>
+  </tr>
+  <tr>
+    <td><img src="https://img.icons8.com/color/48/000000/python.png" alt="Python" width="40"/></td>
+    <td><b>Python</b><br>Core language for data processing, analysis, and visualization.</td>
+  </tr>
+  <tr>
+    <td><img src="https://pandas.pydata.org/static/img/pandas_mark.svg" alt="Pandas" width="40"/></td>
+    <td><b>Pandas</b><br>Used for data manipulation and cleaning.</td>
+  </tr>
+  <tr>
+    <td><img src="https://matplotlib.org/_static/logo2_compressed.svg" alt="Matplotlib" width="40"/></td>
+    <td><b>Matplotlib</b><br>Data visualization with plots and charts.</td>
+  </tr>
+  <tr>
+    <td><img src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg" alt="Seaborn" width="80"/></td>
+    <td><b>Seaborn</b><br>Statistical data visualization (heatmaps, distributions).</td>
+  </tr>
+  <tr>
+    <td><img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Folium_logo.svg" alt="Folium" width="40"/></td>
+    <td><b>Folium</b><br>Interactive geographic mapping using Leaflet.js via Python.</td>
+  </tr>
+  <tr>
+    <td><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/SQLAlchemy_Logo.png" alt="SQLAlchemy" width="60"/></td>
+    <td><b>SQLAlchemy</b><br>Database connection and ORM for SQL-Python integration.</td>
+  </tr>
+  <tr>
+    <td><img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" alt="NumPy" width="60"/></td>
+    <td><b>NumPy</b><br>Efficient numerical computations and array handling.</td>
+  </tr>
+  <tr>
+    <td><img src="https://jupyter.org/assets/homepage/main-logo.svg" alt="Jupyter" width="40"/></td>
+    <td><b>Jupyter Notebook</b><br>Interactive development environment for writing and running Python + SQL.</td>
+  </tr>
+</table>
 
 
 ## 🤝 Conclusion
 
 This project underscores the immense power of integrating SQL and Python for transforming raw data into actionable business intelligence. By strategically focusing on user engagement, sentiment, geographical factors, and time-based trends, restaurant businesses can make data-driven decisions that enhance operational efficiency, elevate customer satisfaction, and ultimately secure a competitive edge in the dynamic market.
+
 
