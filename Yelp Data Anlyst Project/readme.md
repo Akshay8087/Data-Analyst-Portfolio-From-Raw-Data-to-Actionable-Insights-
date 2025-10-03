@@ -1,5 +1,51 @@
 # 📈 Yelp Restaurant Business Success Analysis with SQL & Python
 
+
+## 🧾 Table of Contents (Index)
+
+
+
+🔵 [Project Overview](#-project-overview)
+
+
+
+🔵 [Problem Statement](#-problem-statement)
+
+
+
+🔵 [Research Objectives](#-research-objectives)
+
+
+
+🔵 [Hypotheses](#-hypotheses)
+
+
+
+🔵 [Dataset](#-dataset)
+
+
+
+🔵 [Analysis Steps](#-analysis-steps)
+
+
+
+🔵 [Key Findings](#-key-findings)
+
+
+
+🔵 [Recommendations](#-recommendations)
+
+
+
+🔵 [Technologies Used](#-technologies-used)
+
+
+
+🔵 [Conclusion](#-conclusion)
+
+
+
+---
 ## Project Overview
 
 This project delves into the vast Yelp dataset to uncover key factors influencing the success of restaurants. By employing a robust SQL-based data analysis approach, complemented with Python for data handling and visualization, we aim to transform raw business, review, user, tip, and check-in data into actionable business intelligence. The analysis focuses on understanding user engagement, sentiment, geographical impact, and temporal trends to provide strategic recommendations for restaurant stakeholders.
@@ -201,3 +247,4 @@ Based on the comprehensive analysis, the following recommendations are put forth
 ## 🤝 Conclusion
 
 This project underscores the immense power of integrating SQL and Python for transforming raw data into actionable business intelligence. By strategically focusing on user engagement, sentiment, geographical factors, and time-based trends, restaurant businesses can make data-driven decisions that enhance operational efficiency, elevate customer satisfaction, and ultimately secure a competitive edge in the dynamic market.
+
