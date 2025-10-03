@@ -58,4 +58,6 @@ engine = create_engine('sqlite:///yelp.db')
 # df_review.to_sql('review', engine, if_exists='replace', index=False)
 # df_user.to_sql('user', engine, if_exists='replace', index=False)
 # df_tip.to_sql('tip', engine, if_exists='replace', index=False)
+
 # df_checkin.to_sql('checkin', engine, if_exists='replace', index=False)
+```
