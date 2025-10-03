@@ -1,6 +1,25 @@
 # 📈 Yelp Restaurant Business Success Analysis with SQL & Python
 
 
+<p align="left">
+  <!-- Languages -->
+  <img src="https://img.shields.io/badge/SQL-025E8C?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQL Badge"/>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python Badge"/>
+
+  <!-- Libraries -->
+  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas Badge"/>
+  <img src="https://img.shields.io/badge/Numpy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy Badge"/>
+  <img src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=matplotlib&logoColor=white" alt="Matplotlib Badge"/>
+  <img src="https://img.shields.io/badge/Seaborn-3B414A?style=for-the-badge&logo=python&logoColor=white" alt="Seaborn Badge"/>
+  <img src="https://img.shields.io/badge/Folium-77B829?style=for-the-badge&logo=leaflet&logoColor=white" alt="Folium Badge"/>
+  
+  <!-- Tools -->
+  <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter Badge"/>
+  <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite Badge"/>
+  <img src="https://img.shields.io/badge/SQLAlchemy-DC322F?style=for-the-badge&logo=python&logoColor=white" alt="SQLAlchemy Badge"/>
+  <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VS Code Badge"/>
+</p>
+
 ## 🧾 Table of Contents (Index)
 
 
@@ -276,5 +295,6 @@ Based on the comprehensive analysis, the following recommendations are put forth
 ## 🤝 Conclusion
 
 This project underscores the immense power of integrating SQL and Python for transforming raw data into actionable business intelligence. By strategically focusing on user engagement, sentiment, geographical factors, and time-based trends, restaurant businesses can make data-driven decisions that enhance operational efficiency, elevate customer satisfaction, and ultimately secure a competitive edge in the dynamic market.
+
 
 
