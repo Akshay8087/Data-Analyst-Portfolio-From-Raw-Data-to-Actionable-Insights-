@@ -61,3 +61,46 @@ engine = create_engine('sqlite:///yelp.db')
 
 # df_checkin.to_sql('checkin', engine, if_exists='replace', index=False)
 ```
+
+
+### 2. Initial Data Exploration & Filtering
+We connect to the database and identify available tables.
+
+```python
+conn = sqlite3.connect('yelp.db')
+tables_query = "SELECT name FROM sqlite_master WHERE type='table';"
+tables_df = pd.read_sql_query(tables_query, conn)
+print("Available Tables:", tables_df['name'].tolist())
+
+# Explore sample data
+# for table_name in tables_df['name']:
+#     print(f"\n--- Table: {table_name} ---")
+#     print(pd.read_sql_query(f"SELECT * FROM {table_name} LIMIT 5;", conn))
+```
+
+
+
+#### To focus our analysis, we filter for "open" businesses categorized as "restaurants".
+
+
+```sql
+SELECT business_id
+FROM business
+WHERE lower(categories) LIKE '%restaurant%'
+  AND is_open = 1;
+```
+
+
+### 3. Descriptive Statistics & Outlier Treatment
+We calculate descriptive statistics (average, min, max, median) for review_count and stars to understand their distribution and identify outliers.
+
+```SQL
+
+SELECT
+    AVG(review_count) AS avg_review_count,
+    MIN(review_count) AS min_review_count,
+    MAX(review_count) AS max_review_count,
+    (SELECT review_count FROM business ORDER BY review_count LIMIT 1 OFFSET (SELECT COUNT(*) FROM business) / 2) AS median_review_count
+FROM business
+WHERE business_id IN (...filtered_restaurant_ids...);
+```
