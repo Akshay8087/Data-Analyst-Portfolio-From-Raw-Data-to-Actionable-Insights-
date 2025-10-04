@@ -10,7 +10,7 @@ I am committed to continuous learning and practical application, which is why I'
 * **Languages:** SQL (PostgreSQL, T-SQL), Python
 * **Python Libraries (EDA):** Pandas, NumPy, Matplotlib, Seaborn
 * **Databases:** PostgreSQL, SQL Server, MySQL
-* **BI & Visualization Tools:** Power BI, Tableau, Excel
+* **BI & Visualization Tools:** Power BI, Tableau, Excel 
 * **Version Control:** Git & GitHub
 
 ---
