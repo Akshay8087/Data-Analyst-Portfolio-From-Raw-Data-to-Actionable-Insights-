@@ -5,7 +5,7 @@
   <img alt="DAX" src="https://img.shields.io/badge/DAX-2E8540?style=for-the-badge&logo=Power-BI&logoColor=white">
   <img alt="Power Query" src="https://img.shields.io/badge/Power%20Query-2E8540?style=for-the-badge&logo=Power-BI&logoColor=white">
 </p>
-
+  
 <p align="center">
   <a href="https://www.linkedin.com/in/akshay-rathod-data-analyst/">
     <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Akshay%20Rathod-0A66C2?style=for-the-badge&logo=linkedin">
@@ -140,6 +140,7 @@ Update file source → Apply changes
 - 📧 akshayrathod8179@gmail.com
 - 📞 8087828179
 - Stay Tuned For AB Testing
+
 
 
 
