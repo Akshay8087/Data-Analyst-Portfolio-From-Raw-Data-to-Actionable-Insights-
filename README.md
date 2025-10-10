@@ -4,7 +4,7 @@ Welcome to my data analysis portfolio! This repository is a collection of my pro
 
 I am committed to continuous learning and practical application, which is why I've challenged myself to upload a new project **every two days**. Follow along to see my journey!
  
----
+--- 
 
 ## 🛠️ My Tech Stack
 * **Languages:** SQL (PostgreSQL, T-SQL), Python
