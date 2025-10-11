@@ -6,7 +6,7 @@ I am committed to continuous learning and practical application, which is why I'
   
 --- 
 
-## 🛠️ My Tech Stack
+## 🛠️ My Tech Stack 
 * **Languages:** SQL (PostgreSQL, T-SQL), Python
 * **Python Libraries (EDA):** Pandas, NumPy, Matplotlib, Seaborn
 * **Databases:** PostgreSQL, SQL Server, MySQL
