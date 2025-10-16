@@ -181,3 +181,26 @@ FROM ola_bookings_july
 WHERE booking_status = 'Success' AND ride_distance > 0
 GROUP BY vehicle_type;
 ```
+
+### 👥 Customer & Driver Behavior
+
+
+###  Top 5 customers by bookings
+
+```SQl
+SELECT customer_id, COUNT(*) AS total_bookings
+FROM ola_bookings_july
+GROUP BY customer_id
+ORDER BY total_bookings DESC
+LIMIT 5;
+```
+### Customer rating by vehicle type
+
+```sql
+SELECT vehicle_type, 
+       ROUND(AVG(customer_rating), 2) AS avg_customer_rating,
+       COUNT(*) AS total_rides
+FROM ola_bookings_july
+GROUP BY vehicle_type
+ORDER BY avg_customer_rating DESC;
+```
