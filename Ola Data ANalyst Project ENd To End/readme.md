@@ -222,7 +222,10 @@ The header provides a real-time pulse of the business:
     * `Cancellation Rate by Vehicle`: The rate is almost identical across all vehicle types (27-28%). This proves the cancellation issue is systemic and platform-wide, not isolated to a specific service.
 
 #### View 3: Vehicle Performance Analysis
-This view compares the performance of different services.
+
+<img width="1288" height="720" alt="Image" src="https://github.com/user-attachments/assets/0d01c7c6-18a2-42af-9383-ef9d5e74539e" />
+
+##### This view compares the performance of different services.
 * **Insights:**
     * `Operational Efficiency Breakdown`: This table is crucial. It shows that besides cancellations, a significant portion of failed bookings are due to **"Driver Not Found" (9-10%)**. This is a core service failure.
     * `Top Vehicles by Booking Volume`: Demand is well-spread, with Prime Sedan, eBike, and Auto leading slightly.
