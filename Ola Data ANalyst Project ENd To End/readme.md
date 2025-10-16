@@ -210,7 +210,10 @@ This page gives a 360-degree view of the operation.
     * `Cancellation Breakdown`: This is the most alarming chart. **Drivers (18.4K)** cancel rides far more frequently than **Customers (10.5K)**, pinpointing where the problem originates.
 
 #### View 2: Cancellation Analysis
-This page is dedicated to dissecting the cancellation problem.
+
+<img width="1278" height="715" alt="Image" src="https://github.com/user-attachments/assets/34cd5c24-d41b-40cb-bea5-bc97956d2cea" />
+
+##### This page is dedicated to dissecting the cancellation problem.
 * **Insights:**
     * `Hourly & Daily Cancellation Trends`: Cancellations fluctuate throughout the day and week, likely spiking during peak demand or high-traffic periods.
     * `Daily Bookings vs. Cancellations`: The two lines track each other closely, indicating that cancellations are a consistent percentage of total bookings.
