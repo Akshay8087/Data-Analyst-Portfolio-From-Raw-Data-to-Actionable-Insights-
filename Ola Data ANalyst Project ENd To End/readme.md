@@ -111,3 +111,47 @@ CREATE TABLE ola_bookings_july (
 COPY ola_bookings_july 
 FROM 'D:/Ola Data Analytics End to End Project/Bookings OLA - July.csv' 
 WITH (FORMAT CSV, HEADER TRUE, NULL 'null');
+
+
+
+### ✅ Ride Status & Cancellations
+
+###Successful Bookings
+```SQL
+CREATE VIEW successful_booking AS
+SELECT COUNT(*) AS bookings
+FROM ola_bookings_july
+WHERE booking_status = 'Success';
+```
+### Cancellations
+
+```SQL
+SELECT COUNT(*) FROM ola_bookings_july WHERE booking_status = 'Canceled by Customer';
+SELECT COUNT(*) FROM ola_bookings_july WHERE booking_status = 'Canceled by Driver';
+```
+
+### Incomplete Rides with Reason
+```SQL
+-- Incomplete Rides with Reason
+SELECT Booking_ID, Incomplete_Rides_Reason
+FROM ola_bookings_july
+WHERE Incomplete_Rides = 'Yes';
+```
+
+### 🚗 Vehicle & Distance Metrics
+
+#### Avg ride distance per vehicle
+
+```SQl
+CREATE VIEW ride_distance_each_vehicle AS
+SELECT vehicle_type, ROUND(AVG(ride_distance), 2) AS avg_ride_distance
+FROM ola_bookings_july
+GROUP BY vehicle_type;
+```
+####  Driver ratings per vehicle
+
+```SQL
+SELECT vehicle_type, MAX(driver_ratings), MIN(driver_ratings)
+FROM ola_bookings_july
+GROUP BY vehicle_type;
+```
