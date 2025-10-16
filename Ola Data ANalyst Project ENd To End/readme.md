@@ -201,7 +201,9 @@ The header provides a real-time pulse of the business:
 * **Avg Driver Rating (4.00):** A measure of service quality. A 4.0 is decent but has room for improvement.
 
 #### View 1: The Main Overview
+
 <img width="1287" height="728" alt="Image" src="https://github.com/user-attachments/assets/f91b9b2d-5f62-4d89-a01d-2e1a9a648dff" />
+
 ##### This page gives a 360-degree view of the operation.
 * **Insights:**
     * `Daily Revenue vs. Booking Trends`: Revenue and bookings trend together, showing no major pricing anomalies.
