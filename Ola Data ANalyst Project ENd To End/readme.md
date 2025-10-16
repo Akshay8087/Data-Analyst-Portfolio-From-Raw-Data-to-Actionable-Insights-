@@ -1,6 +1,19 @@
 # In-Depth Analysis of Ola Cabs' Operational Performance
 
+
+<p align="center">
+  <img src="https://img.icons8.com/color/48/power-bi.png" alt="Power BI" width="40"/>
+  <img src="https://img.icons8.com/color/48/postgreesql.png" alt="PostgreSQL" width="40"/>
+  <img src="https://img.icons8.com/ios-filled/50/000000/sql.png" alt="SQL" width="40"/>
+  <img src="https://img.icons8.com/color/48/ms-excel.png" alt="Excel" width="40"/>
+  <img src="https://img.icons8.com/ios-glyphs/30/github.png" alt="GitHub" width="40"/>
+</p>
+
+
 ## 📊 Business Intelligence Dashboard & SQL Analysis Project
+
+<img width="1287" height="728" alt="Image" src="https://github.com/user-attachments/assets/f91b9b2d-5f62-4d89-a01d-2e1a9a648dff" />
+
 
 A comprehensive deep-dive into Ola's booking data to uncover operational inefficiencies, understand customer and driver behavior, and identify key drivers of revenue. This repository contains the complete SQL analysis and a detailed breakdown of the Power BI dashboard created to visualize the findings.
 
