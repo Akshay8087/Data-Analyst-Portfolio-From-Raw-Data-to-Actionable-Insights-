@@ -232,7 +232,10 @@ The header provides a real-time pulse of the business:
     * `Vehicle Type Rating vs Completion Analysis`: There is no strong correlation between a vehicle's average rating and its completion rate. All vehicles perform at a similar level.
 
 #### View 4: Revenue Trend Analysis
-This page focuses on the financial aspects.
+
+<img width="1282" height="717" alt="Image" src="https://github.com/user-attachments/assets/9d62e5e9-34d0-4ed8-9e90-5cd88c0f461c" />
+
+##### This page focuses on the financial aspects.
 * **Insights:**
     * `Customer Loyalty Snapshot`: An extremely powerful insight. **Returning Customers account for ₹52M of the total ₹57M revenue**. This means customer retention is mission-critical for financial health.
     * `Detailed Revenue Trend`: The daily and hourly revenue streams are stable and predictable, indicating a mature and consistent business operation.
