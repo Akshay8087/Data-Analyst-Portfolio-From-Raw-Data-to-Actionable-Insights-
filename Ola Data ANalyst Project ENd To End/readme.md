@@ -155,3 +155,29 @@ SELECT vehicle_type, MAX(driver_ratings), MIN(driver_ratings)
 FROM ola_bookings_july
 GROUP BY vehicle_type;
 ```
+### 💰 Revenue & Payment Analysis
+
+#### Total revenue from successful rides
+
+```SQL
+SELECT SUM(booking_value) AS total_successful_value
+FROM ola_bookings_july
+WHERE booking_status = 'Success';
+```
+
+#### -- Revenue by payment method
+
+``` SQL
+SELECT payment_method, SUM(booking_value) AS total_successful_value
+FROM ola_bookings_july
+WHERE booking_status = 'Success'
+GROUP BY payment_method;
+```
+#### Average fare per km
+```sql
+SELECT vehicle_type, 
+       ROUND(SUM(booking_value) / SUM(ride_distance), 2) AS avg_fare_per_km
+FROM ola_bookings_july
+WHERE booking_status = 'Success' AND ride_distance > 0
+GROUP BY vehicle_type;
+```
