@@ -27,9 +27,9 @@ The primary goal is to provide a practical tool (this Streamlit web application)
 
 This information can empower businesses to:
 * 🎯 Target marketing campaigns more effectively.
-* personalise customer experiences and offers.
+* 🛍️ Personalize customer experiences and offers.
 * 📈 Optimize product development and pricing strategies.
-* enhance customer relationship management (CRM).
+* 🤝 Enhance customer relationship management (CRM).
 
 ---
 
@@ -86,10 +86,10 @@ The core of this application is a K-Means clustering model trained to group cust
 
 1.  **Algorithm:** K-Means aims to partition *n* observations into *k* clusters in which each observation belongs to the cluster with the nearest mean (cluster centroid).
 2.  **Determining the Number of Clusters (k):**
-    * The **Elbow Method** was used (`Kmeans Clustering.ipynb`).
+    * The **Elbow Method** was used (`Kmeans Clustering.ipynb`). 
     * The Sum of Squared Errors (SSE or Inertia) was calculated for different values of *k* (from 1 to 9).
     * A plot of SSE vs. *k* shows an "elbow" point, suggesting the optimal number of clusters where adding more clusters yields diminishing returns in variance reduction.
-    * Based on the elbow plot in the notebook, **k = 4** was chosen as the optimal number of clusters. 
+    * Based on the elbow plot in the notebook, **k = 4** was chosen as the optimal number of clusters.
 3.  **Feature Scaling:**
     * Input features (`Gender`, `Age`, `Annual Income (k$)`, `Spending Score (1-100)`) were scaled using `StandardScaler` from Scikit-learn. This is crucial for K-Means as it's distance-based, ensuring features with larger values don't disproportionately influence the result.
     * The *fitted* scaler object is saved to `scaler.pkl` and loaded by the Streamlit app to scale user input.
