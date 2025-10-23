@@ -1,0 +1,110 @@
+# 🛍️ Customer Segmentation Web Application using K-Means
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python Version](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Framework-Streamlit-red.svg)](https://streamlit.io/)
+[![Scikit-learn](https://img.shields.io/badge/Scikit--learn-Used-orange.svg)](https://scikit-learn.org/)
+[![Plotly](https://img.shields.io/badge/Visualization-Plotly-purple.svg)](https://plotly.com/)
+
+An interactive web application built with Streamlit for segmenting mall customers into distinct groups based on their demographics and spending habits. This application leverages a K-Means clustering model trained on the Mall Customer dataset.
+
+![App Screenshot](./images/app_screenshot.png)
+*(**Note:** You need to replace the above line with an actual screenshot or GIF of your application. Create an `images` folder in your repository and place the file there.)*
+
+---
+
+## 📖 Project Overview
+
+In today's competitive market, understanding customer behavior is crucial for business success. **Customer segmentation** is the process of dividing a customer base into groups of individuals that are similar in specific ways relevant to marketing, such as age, gender, interests, and spending habits.
+
+This project implements a customer segmentation solution using the **K-Means clustering algorithm**, a popular unsupervised machine learning technique. By analyzing patterns in the **Mall Customer dataset**, we identify distinct customer segments.
+
+The primary goal is to provide a practical tool (this Streamlit web application) that allows users to:
+
+1.  Input characteristics of a new or hypothetical customer.
+2.  Receive an immediate prediction of which segment that customer likely belongs to.
+3.  Visualize the segments and understand their defining characteristics (income vs. spending score).
+
+This information can empower businesses to:
+* 🎯 Target marketing campaigns more effectively.
+* personalise customer experiences and offers.
+* 📈 Optimize product development and pricing strategies.
+* enhance customer relationship management (CRM).
+
+---
+
+## ✨ Key Features
+
+* **Interactive Sidebar:** Intuitive controls (`st.selectbox`, `st.slider`) allow users to input customer `Gender`, `Age`, `Annual Income (k$)`, and `Spending Score (1-100)`.
+* **Real-time K-Means Prediction:** Utilizes a pre-trained Scikit-learn K-Means model (`k_means.pkl`) to instantly assign the input customer to one of the 4 identified clusters.
+* **Data Scaling Integration:** Employs a pre-fitted `StandardScaler` (`scaler.pkl`) to transform user input, ensuring consistency with the model's training data scale for accurate predictions.
+* **Dynamic Cluster Labeling:** Intelligently assigns descriptive names to clusters (e.g., "High Income - High Spending") based on the characteristics of their centroids (cluster centers), making the results easily interpretable. Falls back to default labels if dynamic assignment fails.
+* **Clear Results Display:** Presents the predicted cluster number (`st.metric`) and the corresponding segment name (`st.success`) prominently.
+* **Segment Insights:** Includes an expandable section (`st.expander`) detailing the typical characteristics of each identified customer segment.
+* **Interactive Visualization with Plotly:** Features a dynamic scatter plot (`plotly.express.scatter`) showing all customers based on `Annual Income` vs. `Spending Score`, color-coded by their predicted segment. Hovering over points reveals additional customer details (`Age`, `Gender`).
+* **Input Customer Highlighting:** The customer defined by the user's input is clearly marked with a distinct 'X' symbol on the scatter plot for easy comparison.
+* **Efficient Caching:** Leverages Streamlit's `@st.cache_resource` and `@st.cache_data` decorators to optimize performance by caching the loading of the model, scaler, and dataset.
+* **Error Handling:** Includes basic error handling for file loading (model, scaler, data).
+
+---
+
+## 🛠️ Technology Stack
+
+* **Core Language:** Python (3.8+)
+* **Web Application Framework:** Streamlit
+* **Machine Learning Library:** Scikit-learn
+    * `KMeans` for clustering
+    * `StandardScaler` for feature scaling
+    * `silhouette_score` for model evaluation
+* **Data Handling:** Pandas, NumPy
+* **Interactive Visualization:** Plotly Express, Plotly Graph Objects (go)
+* **Model & Scaler Persistence:** Pickle
+* **Development Environment:** Jupyter Notebook (for model training and exploration)
+
+---
+
+## 📊 Dataset: Mall Customer Segmentation
+
+* **Source:** [Kaggle Dataset Link](https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python) (or update with your specific source)
+* **Description:** This dataset contains basic information about mall customers, ideal for segmentation tasks.
+* **Features Used in Model:**
+    * `Gender`: Categorical (Male/Female), converted to numerical (1/0).
+    * `Age`: Numerical.
+    * `Annual Income (k$)`: Numerical, representing income in thousands of dollars.
+    * `Spending Score (1-100)`: Numerical score assigned by the mall based on customer behavior.
+* **Preprocessing Steps (as per `Kmeans Clustering.ipynb`):**
+    1.  Load data using Pandas.
+    2.  Map `Gender` ('Male': 1, 'Female': 0).
+    3.  Drop the `CustomerID` column as it's an identifier and not a feature for clustering.
+    4.  Apply `StandardScaler` to the features (`Gender`, `Age`, `Annual Income (k$)`, `Spending Score (1-100)`) before feeding them into the K-Means algorithm.
+
+---
+
+## 🤖 Model Details: K-Means Clustering
+
+The core of this application is a K-Means clustering model trained to group customers into segments.
+
+1.  **Algorithm:** K-Means aims to partition *n* observations into *k* clusters in which each observation belongs to the cluster with the nearest mean (cluster centroid).
+2.  **Determining the Number of Clusters (k):**
+    * The **Elbow Method** was used (`Kmeans Clustering.ipynb`).
+    * The Sum of Squared Errors (SSE or Inertia) was calculated for different values of *k* (from 1 to 9).
+    * A plot of SSE vs. *k* shows an "elbow" point, suggesting the optimal number of clusters where adding more clusters yields diminishing returns in variance reduction.
+    * Based on the elbow plot in the notebook, **k = 4** was chosen as the optimal number of clusters. 
+3.  **Feature Scaling:**
+    * Input features (`Gender`, `Age`, `Annual Income (k$)`, `Spending Score (1-100)`) were scaled using `StandardScaler` from Scikit-learn. This is crucial for K-Means as it's distance-based, ensuring features with larger values don't disproportionately influence the result.
+    * The *fitted* scaler object is saved to `scaler.pkl` and loaded by the Streamlit app to scale user input.
+4.  **Training:**
+    * A `KMeans` model with `n_clusters=4` and `random_state=42` (for reproducibility) was fitted on the *scaled* Mall Customer data.
+    * The trained model object is saved to `k_means.pkl`.
+5.  **Segment Interpretation (Dynamic Labeling):**
+    * The application dynamically assigns meaningful labels to the clusters (0, 1, 2, 3) predicted by the model.
+    * It retrieves the cluster centers (centroids) from the trained `kmeans_model`.
+    * These centers, which are in the *scaled* feature space, are transformed back to the *original* data scale using the `scaler.inverse_transform()` method.
+    * By comparing the `Annual Income (k$)` and `Spending Score (1-100)` values of these original-scale centroids against their overall means, the app assigns descriptive labels like "High Income – Low Spending". This makes the prediction output intuitive for the user.
+6.  **Evaluation:**
+    * The **Silhouette Score** was calculated (`Kmeans Clustering.ipynb`) to measure cluster cohesion and separation.
+    * The model achieved a score of **~0.41**. A score closer to 1 indicates well-separated clusters, while a score around 0 indicates overlapping clusters. 0.41 suggests a reasonable segmentation, though potentially with some overlap between groups.
+
+---
+
+## 📁 Code Structure
