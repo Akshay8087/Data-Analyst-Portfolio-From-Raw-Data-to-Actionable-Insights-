@@ -117,8 +117,8 @@ Follow these instructions to set up and run the project locally:
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [https://github.com/Akshay8087/Customer-Segmentation-Streamlit.git](https://github.com/Akshay8087/Customer-Segmentation-Streamlit.git) # <-- Adjust repo name if needed
-    cd Customer-Segmentation-Streamlit # <-- Adjust repo name if needed
+    git clone [https://github.com/Akshay8087/Customer-Segmentation-Streamlit.git]([https://github.com/Akshay8087/Customer-Segmentation-Streamlit.git](https://github.com/Akshay8087/Data-Analyst-Portfolio-From-Raw-Data-to-Actionable-Insights-/tree/main/Customer%20Segmentation%20Using%20Unseupervised%20K-means)) # <-- Adjust repo name if needed
+   
     ```
 
 2.  **Set up a Python Virtual Environment:** (Highly Recommended)
@@ -210,8 +210,9 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 Akshay8087 – [akshay8087.github@email.com](mailto:akshay8087.github@email.com) *(Placeholder Email - Update if desired)*
 
-Project Link: [https://github.com/Akshay8087/Customer Segmentation Using Unseupervised K-means]([https://github.com/Akshay8087/Customer-Segmentation-Streamlit](https://github.com/Akshay8087/Data-Analyst-Portfolio-From-Raw-Data-to-Actionable-Insights-/tree/main/Customer%20Segmentation%20Using%20Unseupervised%20K-means)) *(Adjust repo name if needed)*
+Project Link: [https://github.com/Akshay8087/Customer Segmentation Using Unseupervised K-means]([https://github.com/Akshay8087/Customer-Segmentation-Streamlit](https://github.com/Akshay8087/Data-Analyst-Portfolio-From-Raw-Data-to-Actionable-Insights-/tree/main/Customer%20Segmentation%20Using%20Unseupervised%20K-means))
 
 ---
+
 
 
