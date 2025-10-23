@@ -8,7 +8,13 @@
 
 An interactive web application built with Streamlit for segmenting mall customers into distinct groups based on their demographics and spending habits. This application leverages a K-Means clustering model trained on the Mall Customer dataset.
 
-![App Screenshot](./images/app_screenshot.png)
+
+<img width="1918" height="928" alt="Image" src="https://github.com/user-attachments/assets/454ff199-d41b-4ce3-acfc-8638c7379a10" />
+
+---
+
+<img width="1920" height="897" alt="Image" src="https://github.com/user-attachments/assets/8e36fe51-09d3-4099-8954-7a9a4ac01aef" />
+
 *(**Note:** You need to replace the above line with an actual screenshot or GIF of your application. Create an `images` folder in your repository and place the file there.)*
 
 ---
@@ -213,6 +219,7 @@ Akshay8087 – [akshay8087.github@email.com](mailto:akshay8087.github@email.com)
 Project Link: [https://github.com/Akshay8087/Customer Segmentation Using Unseupervised K-means]([https://github.com/Akshay8087/Customer-Segmentation-Streamlit](https://github.com/Akshay8087/Data-Analyst-Portfolio-From-Raw-Data-to-Actionable-Insights-/tree/main/Customer%20Segmentation%20Using%20Unseupervised%20K-means))
 
 ---
+
 
 
 
