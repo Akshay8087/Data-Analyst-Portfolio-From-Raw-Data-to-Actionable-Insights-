@@ -210,6 +210,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 Akshay8087 – [akshay8087.github@email.com](mailto:akshay8087.github@email.com) *(Placeholder Email - Update if desired)*
 
-Project Link: [https://github.com/Akshay8087/Customer-Segmentation-Streamlit](https://github.com/Akshay8087/Customer-Segmentation-Streamlit) *(Adjust repo name if needed)*
+Project Link: [https://github.com/Akshay8087/Customer Segmentation Using Unseupervised K-means](https://github.com/Akshay8087/Customer-Segmentation-Streamlit) *(Adjust repo name if needed)*
 
 ---
+
