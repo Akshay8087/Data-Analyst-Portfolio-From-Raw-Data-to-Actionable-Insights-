@@ -96,3 +96,12 @@ The final solution was converted into a user-friendly web app:
 git clone [https://github.com/Akshay8087/Data-Analyst-Portfolio-From-Raw-Data-to-Actionable-Insights-.git](https://github.com/Akshay8087/Data-Analyst-Portfolio-From-Raw-Data-to-Actionable-Insights-.git)
 cd Data-Analyst-Portfolio-From-Raw-Data-to-Actionable-Insights-/Email%20Spam%20Classifier
 ```
+
+
+## 2. Create a virtual environment (Optional but recommended):
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+```
+
+
