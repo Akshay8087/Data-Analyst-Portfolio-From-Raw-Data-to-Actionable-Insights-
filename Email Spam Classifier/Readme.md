@@ -8,6 +8,21 @@
 
 > **Turn raw text data into a secure, automated defense system against unsolicited messaging.**
 
+
+## 📋 Table of Contents
+- [🎯 Executive Summary](#-executive-summary)
+- [🖼️ Application Demo](#️-application-demo)
+- [🔍 Problem Statement & Business Context](#-problem-statement--business-context)
+- [📂 Repository Structure](#-repository-structure)
+- [🛠️ Technical Architecture](#️-technical-architecture)
+- [📊 Key Insights from EDA](#-key-insights-from-eda-exploratory-data-analysis)
+- [⚙️ Machine Learning Workflow](#️-machine-learning-workflow)
+- [💻 How to Run Locally](#-how-to-run-locally)
+- [🔮 Future Improvements](#-future-improvements)
+- [🤝 Connect with Me](#-connect-with-me)
+
+---
+
 ## 🎯 Executive Summary
 In the era of digital communication, spam is not just a nuisance—it's a security risk and a drain on productivity. This project addresses this issue by engineering an end-to-end machine learning pipeline capable of detecting SMS spam with a **100% Precision rate**, ensuring that while unwanted messages are filtered, no critical legitimate messages (OTPs, personal alerts) are ever incorrectly blocked.
 
@@ -172,4 +187,5 @@ To further enhance the capabilities and robustness of this classifier, several f
 If you found this project interesting, have feedback, or want to collaborate, feel free to reach out!
 
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/akshay-nazar-02b101228/) &nbsp; [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Akshay8087)
+
 
