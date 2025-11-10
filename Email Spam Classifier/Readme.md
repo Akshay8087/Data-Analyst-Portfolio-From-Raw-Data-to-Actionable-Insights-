@@ -28,6 +28,49 @@ Unsolicited SMS (Spam) accounts for significant disruption in daily mobile usage
 * **Key Business KPI:** **Precision**. In spam detection, a False Positive (flagging a real message as spam) is catastrophic (e.g., missing a bank alert). Therefore, optimizing for high precision is more critical than raw accuracy.
 
 ---
+## ⚙️ Project Workflow
+
+The project is structured into several key stages:
+
+### 1. Data Cleaning
+Before analysis, the raw dataset was cleaned to ensure quality:
+* **Dropping Irrelevant Columns:** Removed unnamed columns containing minimal data.
+* **Renaming:** Standardized column names to `target` and `text` for clarity.
+* **Label Encoding:** Converted categorical target labels ('ham'/'spam') to numerical values (0/1).
+* **Handling Duplicates:** Identified and removed duplicate entries to prevent data leakage and bias.
+
+### 2. Exploratory Data Analysis (EDA)
+In-depth analysis was conducted to understand underlying patterns:
+* **Class Distribution Analysis:** Visualized the severe imbalance between spam and ham messages using pie charts.
+* **Feature Engineering:** Created new features:
+    * `num_characters`: Total characters in the message.
+    * `num_words`: Total words in the message.
+    * `num_sentences`: Total sentences in the message.
+* **Visualizations:** Used histograms and box plots to compare these new features across both classes.
+* **Correlation Heatmap:** Analyzed relationships between numerical features to avoid multicollinearity.
+* **Word Clouds:** Generated visual representations of the most frequent words in both spam and ham messages.
+
+### 3. Text Preprocessing
+Raw text data requires significant transformation before it can be used by machine learning models. A custom pipeline was implemented:
+1.  **Lowercasing:** converting all text to lowercase for uniformity.
+2.  **Tokenization:** Splitting text into individual words.
+3.  **Removing Special Characters:** Stripping out non-alphanumeric characters.
+4.  **Stop Word Removal:** Filtering out common English words (e.g., 'is', 'the', 'and') using NLTK.
+5.  **Stemming:** Reducing words to their root form using the Porter Stemmer (e.g., 'dancing' -> 'dance').
+
+### 4. Model Building
+Various algorithms were trained and evaluated:
+* **Vectorization:** Used TF-IDF (Term Frequency-Inverse Document Frequency) to convert text into numerical vectors, identifying the most relevant 3000 words.
+* **Model Selection:** Tested multiple classifiers including Logistic Regression, SVM, Decision Trees, Random Forest, AdaBoost, Bagging, ExtraTrees, XGBoost, and Naive Bayes.
+* **Evaluation Metric:** Focused heavily on **Precision Score** to minimize False Positives (we don't want to incorrectly label an important message as spam).
+
+### 5. Deployment
+The final solution was converted into a user-friendly web app:
+* **Web App:** Built using **Streamlit** for rapid prototyping of data apps.
+* **Model Serialization:** The best model and the TF-IDF vectorizer were saved using `pickle`.
+* **Hosting:** Deployed to **Heroku** for public accessibility.
+
+_ _ _
 
 ## 📂 Repository Structure
 ```bash
@@ -129,3 +172,4 @@ To further enhance the capabilities and robustness of this classifier, several f
 If you found this project interesting, have feedback, or want to collaborate, feel free to reach out!
 
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/akshay-nazar-02b101228/) &nbsp; [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Akshay8087)
+
